@@ -11,11 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('countries', function (Blueprint $table) {
-           $table->string('code')->primary();
-           $table->string('name');
-           $table->jsonb('states')->nullable();
-        });
+        Schema::rename('cart_details', 'order_details');
     }
 
     /**
@@ -23,6 +19,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('countries');
+        Schema::table('order_details', function (Blueprint $table) {
+            Schema::dropIfExists('order_details');
+        });
     }
 };
