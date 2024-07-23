@@ -8,7 +8,7 @@ import {
 </script>
 
 <template>
-    <div class="w-[200px] bg-pink-700 text-white py-4 px-2">
+    <div class="w-[200px] bg-pink-700 transition-all text-white py-4 px-2">
         <router-link
             :to="{ name: 'app.dashboard' }"
             class="flex items-center py-1 px-3 rounded transition-colors hover:bg-black/30 mb-2"
@@ -17,7 +17,7 @@ import {
             <span>Dashboard</span>
         </router-link>
         <router-link
-            :to="{ name: 'app.dashboard' }"
+            :to="{ name: 'app.products' }"
             class="flex items-center py-1 px-3 rounded transition-colors hover:bg-black/30 mb-2"
         >
             <span class="mr-2"><ViewColumnsIcon class="size-6" /></span>

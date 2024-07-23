@@ -5,11 +5,16 @@ import {
     UserIcon,
     ArrowRightEndOnRectangleIcon,
 } from "@heroicons/vue/20/solid";
+
+const emit = defineEmits(["toggle-sidebar"]);
 </script>
 
 <template>
-    <header class="h-14 shadow bg-white flex justify-between items-center">
-        <button class="p-4 text-gray-700">
+    <header class="h-14 shadow bg-white px-2 flex justify-between items-center">
+        <button
+            @click="emit('toggle-sidebar')"
+            class="w-8 h-8 flex items-center justify-center rounded transition-colors text-gray-700 hover:bg-black/10"
+        >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
